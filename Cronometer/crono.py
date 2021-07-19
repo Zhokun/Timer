@@ -128,8 +128,8 @@ class Chronometer(Tk):
         varh.set(0)
         varm = IntVar(self)
         varm.set(0)
-        vars = IntVar(self)
-        vars.set(0)
+        varse = IntVar(self)
+        varse.set(0)
         # Set the start button to be clickable
         self.button_start.config(state=NORMAL)
         # Reset to 0 hour, minutes and seconds
@@ -139,7 +139,7 @@ class Chronometer(Tk):
         # Make the spin boxes clickable and the their value to 0
         self.spin_seconds.config(state=NORMAL, textvariable=varh)
         self.spin_minute.config(state=NORMAL, textvariable=varm)
-        self.spin_hour.config(state=NORMAL, textvariable=vars)
+        self.spin_hour.config(state=NORMAL, textvariable=varse)
         # Cancel the 'after' function previously started
         self.after_cancel(update_time)
         # Text to be exhibited once reset button is clicked
