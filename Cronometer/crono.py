@@ -7,7 +7,7 @@ class Chronometer(Tk):
     def __init__(self):
         # Defining dimension
         Tk.__init__(self)
-
+        self.iconphoto(True, PhotoImage(file='Da.png'))
         self.geometry('300x300')
         self.title('Darlan\'s Chronometer')
 
