@@ -124,8 +124,12 @@ class Chronometer(Tk):
     # Function to reset the timer at any time
     def reset(self):
         # Variable to set the value of the spin boxes to zero
-        var = IntVar(self)
-        var.set(0)
+        varh = IntVar(self)
+        varh.set(0)
+        varm = IntVar(self)
+        varm.set(0)
+        vars = IntVar(self)
+        vars.set(0)
         # Set the start button to be clickable
         self.button_start.config(state=NORMAL)
         # Reset to 0 hour, minutes and seconds
@@ -133,9 +137,9 @@ class Chronometer(Tk):
         self.minutes = 0
         self.seconds = 0
         # Make the spin boxes clickable and the their value to 0
-        self.spin_seconds.config(state=NORMAL, textvariable=var)
-        self.spin_minute.config(state=NORMAL, textvariable=var)
-        self.spin_hour.config(state=NORMAL, textvariable=var)
+        self.spin_seconds.config(state=NORMAL, textvariable=varh)
+        self.spin_minute.config(state=NORMAL, textvariable=varm)
+        self.spin_hour.config(state=NORMAL, textvariable=vars)
         # Cancel the 'after' function previously started
         self.after_cancel(update_time)
         # Text to be exhibited once reset button is clicked
